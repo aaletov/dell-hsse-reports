@@ -2,10 +2,10 @@
 # Отчёт по первому заданию лаборатории Dell Technologies - ВШПИ.
 ## Установка baremetal-csi на kind.
 
-Установил [`go v.16.16`](https://go.dev/dl/) для linux-amd64.
+Установил [`go v1.17.7`](https://go.dev/dl/) для linux-amd64.
 ```
-curl -LO https://go.dev/dl/go1.16.15.linux-amd64.tar.gz
-tar -xf go1.16.15.linux-amd64.tar.gz
+curl -LO https://go.dev/dl/go1.17.7.linux-amd64.tar.gz
+tar -xf go1.17.7.linux-amd64.tar.gz
 # Добавить в ~/.bashrc
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -21,6 +21,7 @@ git clone https://github.com/dell/csi-baremetal-operator
 ```
 
 Изменил тестовый StatefulSet `csi-baremetal/test/app/nginx.yaml`, убрав оттуда все PVC.
+Уменьшил количество replicas до 3, поскольку под web-3 оставался pending и на кластере имелось только 3 worker ноды.
 
 ```
 apiVersion: apps/v1
