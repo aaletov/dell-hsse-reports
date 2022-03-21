@@ -2,6 +2,8 @@
 # Отчёт по первому заданию лаборатории Dell Technologies - ВШПИ.
 ## Установка baremetal-csi на kind.
 
+Установка производилась на Ubuntu-20.04 под wsl2.
+
 Установил [`go v1.17.7`](https://go.dev/dl/) для linux-amd64.
 ```
 curl -LO https://go.dev/dl/go1.17.7.linux-amd64.tar.gz
